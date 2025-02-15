@@ -1,0 +1,20 @@
+volumes:
+  db-data:
+
+services:
+  db:
+    image: mysql:9
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+    volumes:
+      - ./infra/db/:/docker-entrypoint-initdb.d/
+      - db-data:/var/lib/mysql
+    ports:
+      - 3306:3306
+  redis:
+    image: redis:7-alpine
+    ports:
+      - 6379:6379
+
+
+

@@ -1,0 +1,25 @@
+{
+  "extends": "@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "noImplicitAny": true,
+    "preserveWatchOutput": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": true,
+    "outDir": "./dist",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    }
+  }
+}
